@@ -13,12 +13,11 @@ for i in range(len(operation_list)):
 sorted_list = sorted(operations_by_date, reverse=True)
 index = 0
 
-while index < 5:
-    num_operation = sorted_list[index]
+while index < 6:
     for i in range(len(operation_list)):
         if 'date' not in operation_list[i]:
             continue
-        if operation_list[i]['date'] == num_operation and operation_list[i]['state'] == "EXECUTED":
+        if operation_list[i]['date'] == sorted_list[index] and operation_list[i]['state'] == "EXECUTED":
             date = operation_list[i]['date']
             description = operation_list[i]['description']
             send_from = operation_list[i]['from']
