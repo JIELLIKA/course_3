@@ -14,7 +14,6 @@ sorted_list = sorted(operations_by_date, reverse=True)
 index = 0
 
 while index < 6:
-    # num_operation = sorted_list[index]
     for i in range(len(operation_list)):
         if 'date' not in operation_list[i]:
             continue
