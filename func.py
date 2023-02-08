@@ -13,7 +13,7 @@ def operations():
 def reformat_date(date):
     """Преобразуем дату в требуемый формат"""
     format_data = datetime.datetime.strptime(date, '%Y-%m-%dT%H:%M:%S.%f')
-    return f'{format_data.day}-{format_data.month}-{format_data.year}'
+    return f'{format_data.day:02}.{format_data.month:02}.{format_data.year:04}'
 
 
 def reformat_card_number(send_from):
